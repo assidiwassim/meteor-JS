@@ -1,0 +1,34 @@
+<template name="map">
+    {{>mapcss}}
+        <div class="container-fluid">
+                <div class="side-body">
+                    <ol class="breadcrumb " id="bread">
+                        <li><a href="{{link}}"><i class="fa fa-home" aria-hidden="true"></i> Acceuil</a></li>
+                        <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Map</a></li>
+                       
+
+                    </ol>
+               
+                   
+                
+                 <div class="map-container">
+                        {{> googleMap name="exampleMap" options=exampleMapOptions}}
+                    </div>
+              
+                 
+                 
+            </div>
+        </div>
+
+</template>
+
+<template name="mapcss">
+    <style>
+        .map-container {
+    width: 100%;
+    height: 500px;
+  }
+        </style>
+
+
+</template>

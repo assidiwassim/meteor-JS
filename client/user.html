@@ -1,0 +1,116 @@
+<template name="user">
+
+                            <nav  id="navBarColor" class="navbar navbar-default navbar-fixed-top hidden-xs" role="navigation">
+                                <div class="container-fluid">
+                                  <div class="navbar-header">
+                                    <a class="navbar-brand"  href="/" id="brandNameColor"><b><i class="fa fa-leaf" aria-hidden="true"></i > Gestion patrimoine</b></a>
+                                  </div>
+                                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav navbar-right">
+                                               {{>loginu}}
+                                    </ul>
+                                  </div>
+                                </div>
+                              </nav>
+                            <br class="hidden-xs"/><br class="hidden-xs"/><br class="hidden-xs"/>
+                            <div class="side-menu">
+                                <nav class="navbar navbar-default" role="navigation">
+                                    <div class="navbar-header">
+                                        <div class="brand-wrapper">
+                                            <button type="button" class="navbar-toggle">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+
+                                            <script>
+                                                $(function () {
+                                                    $('.navbar-toggle').click(function () {
+                                                        $('.navbar-nav').toggleClass('slide-in');
+                                                        $('.side-body').toggleClass('body-slide-in');
+                                                    });
+                                                    $('.Action').click(function () {
+                                                        $('.navbar-nav').toggleClass('slide-in');
+                                                        $('.side-body').toggleClass('body-slide-in');
+                                                    });
+                                                });
+                                            </script>
+                    
+                                            <div class="brand-name-wrapper" id="brandStyle">
+                                                <a class="navbar-brand "  href="#">
+                                                    <i class="fa fa-home hidden-xs "></i>
+                                                    <span class="sr-only"> </span> <b class="hidden-xs"> Bienvenue</b><b class="visible-xs brandMobileColor"><i class="fa fa-leaf" aria-hidden="true"></i> Gestion patrioine</b>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="side-menu-container">
+                                        <ul class="nav navbar-nav">
+                                            <li class="panel panel-default" id="dropdown">
+                                                <a  data-toggle="collapse" href="#dropdown-lvl1" >
+                                                    <i class="fa fa-university" aria-hidden="true"></i> Patrimoines <span class="caret"></span>
+                                                </a>
+                                                <div id="dropdown-lvl1" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <ul class="nav navbar-nav">
+                                                                <li><a class="Action"  href="/user/listePatrimoins">Liste Patrimoines</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                         
+                                            <li class="panel panel-default" id="dropdown">
+                                                <a data-toggle="collapse" href="#dropdown-lvl3">
+                                                    <i class="fa fa-university" aria-hidden="true"></i> Direction <span class="caret"></span>
+                                                </a>
+                                                <div id="dropdown-lvl3" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <ul class="nav navbar-nav">
+                                                                <li><a class="Action"  href="/user/listeDerictions">Liste Directions</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                    
+                                            <li class="panel panel-default" id="dropdown">
+                                                <a data-toggle="collapse" href="#dropdown-lvl8">
+                                                    <i class="fa fa-university" aria-hidden="true"></i> Fonction<span class="caret"></span>
+                                                </a>
+                                                <div id="dropdown-lvl8" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <ul class="nav navbar-nav">
+                                                                <li><a class="Action"  href="/user/listeFonctions">Liste Fonctions</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="visible-xs " ><a href="#" class="log"><span class="glyphicon glyphicon-log-out "></span> Déconnexion</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                    
+                            </div>
+
+        
+                            {{> Template.dynamic template=main}}
+        
+        </template>
+        <template name="loginu">
+                <li class="dropdown">
+                   <a href="#" id="brandNameColor" class="logout"><b> <i class="fa fa-sign-out"></i> Logout (user)</b> </a>
+                 </li>
+             </template>
+
+
+
+
+          
+
+
+
+
+
+
+      

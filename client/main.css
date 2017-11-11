@@ -1,0 +1,22 @@
+.navbar {
+  font-size: 18px !important;
+  font-size: 18px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 1px;
+  border-radius: 0;
+  border: 1px solid #e7e7e7;
+}
+#navBarColor{
+  background-color: #00008B;
+  color: white;
+}
+#brandNameColor{
+  color: white;
+}
+#bread{
+  border: 1px solid #e7e7e7;
+}
+
+.brandMobileColor{
+color:  #00008B;
+}

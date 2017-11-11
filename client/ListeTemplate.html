@@ -1,0 +1,612 @@
+<template name="listePatrimoins">
+        <div class="container-fluid">
+                    <div class="side-body">
+                        <ol class="breadcrumb " id="bread">
+                            <li><a href="{{link}}"><i class="fa fa-home" aria-hidden="true"></i> Acceuil</a></li>
+                            <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> lister des Patrimoins</a></li>
+                           
+
+                        </ol>
+                   
+                        <div class="col-md-12 text-center">
+                                <button class="map btn btn-info">Consuleter Le Map</button>
+                              
+                            </div>
+                    
+                  
+                     <div class="container">
+                            <div class="row">
+                    <div class="gg-pricing-table icon-table col-md-12 mt-50">
+                     {{#each pat}}
+                        {{>csss}}
+                        {{>listep}}
+                     {{/each}}  
+                    </div>
+                            </div>
+                     </div>
+                     
+                </div>
+            </div>
+
+     </template>
+
+     <template name='listep'>
+            
+            <div class="col-md-5">
+                    <div class="single-pricing-table text-center clearfix">
+                        <!-- Heading -->
+                        <div class="pricing-table-heading">
+                            <div class="pricing-icon">
+                                <img src="{{image}}" alt="" class="center-block img-responsive">
+                            </div>
+                            <h2>Patrimoin</h2>
+                        </div>
+                       
+                        <div class="pricing-item">
+                            <ul>
+                                <li><p><strong>Libelle : </strong> {{Libelle}}</p></li>
+                                <li><p><strong>Adresse :</strong> {{adresse}}</p></li>
+                                <li><p><strong>Ville :</strong> {{Ville}}</p></li>
+                                <li><p><strong>SuperficieCouverte :</strong> {{superficieCouverte}}</p></li>
+                                <li><p><strong>CompteurSteg :</strong> {{compteurSteg}}</p></li>
+                                <li><p><strong>CompteurSonede :</strong> {{compteurSonede}}</p></li>
+                                <li><p><strong>Longitude :</strong> {{longitude}}</p></li>
+                                <li><p><strong>Latitude :</strong> {{latitude}}</p></li>
+                                <li><p><strong>Est :</strong> {{est}}</p></li>
+                                <li><p><strong>Ouest :</strong> {{ouest}}</p></li>
+                                <li><p><strong>Sud :</strong> {{sud}}</p></li>
+                                <li><p><strong>Direction :</strong> {{direction}}</p></li>
+                                <li><p><strong>Arrendissemen :</strong> {{Arrendissemen}}</p></li>
+                                <li><p><strong>Delegation :</strong> {{Delegation}}</p></li>
+                                <li><p><strong>Gouvernorat :</strong> {{gouvernorat}}</p></li>
+                                
+                            </ul>
+                        </div>
+                        <!-- Button -->
+                        {{#if test}}
+                        
+                            <a href="#" class="delete2 btn btn-danger"><i class="fa fa-times"></i> Supprimer</a>
+                        
+                        {{/if}}
+                    </div>
+                </div>
+           
+     </template>
+
+     <template name="listeGardes">
+            <div class="container-fluid">
+                        <div class="side-body">
+                            <ol class="breadcrumb " id="bread">
+                                <li><a href="{{link}}"><i class="fa fa-home" aria-hidden="true"></i> Acceuil</a></li>
+                                <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> lister des Garde</a></li>
+                            </ol>
+               
+
+                            <div class="container">
+                                    <div class="row">
+                            <div class="gg-pricing-table icon-table col-md-12 mt-50">
+                             {{#each garde}}
+                                {{>csss}}
+                                <div class="col-md-5">
+                                        <div class="single-pricing-table text-center clearfix">
+                                            <!-- Heading -->
+                                            <div class="pricing-table-heading">
+                                                <div class="pricing-icon">
+                                                    <img src="/images/jmc_sponsor_92.png" alt="" class="center-block img-responsive">
+                                                </div>
+                                                <h2>Garde</h2>
+                                            </div>
+                                           
+                                            <div class="pricing-item">
+                                                <ul>
+                                                    <li><p><strong>Libelle : </strong> {{Libelle}}</p></li>
+                                                  
+                                                    
+                                                </ul>
+                                            </div>
+                                            <!-- Button -->
+                                          
+                                                <a href="#" class="delete10 btn btn-danger"><i class="fa fa-times"></i> Supprimer</a>
+                                          
+                                        </div>
+                                    </div>
+                               
+                             {{/each}}  
+                            </div>
+                                    </div>
+                             </div>
+                    </div>
+                </div>
+    
+         </template>
+
+
+
+     <template name="listeDerictions">
+            <div class="container-fluid">
+                        <div class="side-body">
+                            <ol class="breadcrumb " id="bread">
+                                <li><a href="{{link}}"><i class="fa fa-home" aria-hidden="true"></i> Acceuil</a></li>
+                                <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> lister des Derictions</a></li>
+                            </ol>
+                          
+                            <div class="container">
+                                    <div class="row">
+                            <div class="gg-pricing-table icon-table col-md-12 mt-50">
+                             {{#each der}}
+                                {{>csss}}
+                                <div class="col-md-5">
+                                        <div class="single-pricing-table text-center clearfix">
+                                            <!-- Heading -->
+                                            <div class="pricing-table-heading">
+                                                <div class="pricing-icon">
+                                                    <img src="/images/jmc_sponsor_92.png" alt="" class="center-block img-responsive">
+                                                </div>
+                                                <h2>Deriction</h2>
+                                            </div>
+                                           
+                                            <div class="pricing-item">
+                                                <ul>
+                                                    <li><p><strong>Libelle : </strong> {{Libelle}}</p></li>
+                                                  
+                                                    
+                                                </ul>
+                                            </div>
+                                            <!-- Button -->
+                                            {{#if test}}
+                                          
+                                                <a href="#" class="delete3 btn btn-danger"><i class="fa fa-times"></i> Supprimer</a>
+                                          
+                                            {{/if}}
+                                        </div>
+                                    </div>
+                               
+                             {{/each}}  
+                            </div>
+                                    </div>
+                             </div>
+                         
+                    </div>
+                </div>
+    
+         </template>
+
+
+
+         <template name="listeFonctions">
+                <div class="container-fluid">
+                            <div class="side-body">
+                                <ol class="breadcrumb " id="bread">
+                                    <li><a href="{{link}}"><i class="fa fa-home" aria-hidden="true"></i> Acceuil</a></li>
+                                    <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> liste des Fonctions</a></li>
+                                </ol>
+                           
+
+                                <div class="container">
+                                        <div class="row">
+                                <div class="gg-pricing-table icon-table col-md-12 mt-50">
+                                 {{#each fn}}
+                                    {{>csss}}
+                                    <div class="col-md-5">
+                                            <div class="single-pricing-table text-center clearfix">
+                                                <!-- Heading -->
+                                                <div class="pricing-table-heading">
+                                                    <div class="pricing-icon">
+                                                        <img src="/images/jmc_sponsor_92.png" alt="" class="center-block img-responsive">
+                                                    </div>
+                                                    <h2>Fonction</h2>
+                                                </div>
+                                               
+                                                <div class="pricing-item">
+                                                    <ul>
+                                                        <li><p><strong>Libelle : </strong> {{Libelle}}</p></li>
+                                                      
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <!-- Button -->
+                                                {{#if test}}
+                                              
+                                                    <a href="#" class="delete4 btn btn-danger"><i class="fa fa-times"></i> Supprimer</a>
+                                               
+                                                {{/if}}
+                                            </div>
+                                        </div>
+                                   
+                                 {{/each}}  
+                                </div>
+                                        </div>
+                                 </div>
+                             
+                        </div>
+                    </div>
+        
+             </template>
+
+
+             <template name="listeTypes">
+                    <div class="container-fluid">
+                                <div class="side-body">
+                                    <ol class="breadcrumb " id="bread">
+                                        <li><a href="{{link}}"><i class="fa fa-home" aria-hidden="true"></i> Acceuil</a></li>
+                                        <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> liste des types</a></li>
+                                    </ol>
+                                 
+                                   
+                                <div class="container">
+                                        <div class="row">
+                                <div class="gg-pricing-table icon-table col-md-12 mt-50">
+                                 {{#each typ}}
+                                    {{>csss}}
+                                    <div class="col-md-5">
+                                            <div class="single-pricing-table text-center clearfix">
+                                                <!-- Heading -->
+                                                <div class="pricing-table-heading">
+                                                    <div class="pricing-icon">
+                                                        <img src="/images/jmc_sponsor_92.png" alt="" class="center-block img-responsive">
+                                                    </div>
+                                                    <h2>Type</h2>
+                                                </div>
+                                               
+                                                <div class="pricing-item">
+                                                    <ul>
+                                                        <li><p><strong>Libelle : </strong> {{Libelle}}</p></li>
+                                                        <li><p><strong>Propriete : </strong> {{Propriete}}</p></li>
+                                                     
+                                                    </ul>
+                                                </div>
+                                                <!-- Button -->
+                                             
+                                                    <a href="#" class="delete5 btn btn-danger"><i class="fa fa-times"></i> Supprimer</a>
+                                               
+                                            </div>
+                                        </div>
+                                   
+                                 {{/each}}  
+                                </div>
+                                        </div>
+                                 </div>
+                                       
+                                 
+                            </div>
+                        </div>
+            
+                 </template>
+                
+
+
+
+                 <template name="listeArrendissement">
+                        <div class="container-fluid">
+                                    <div class="side-body">
+                                        <ol class="breadcrumb " id="bread">
+                                            <li><a href="{{link}}"><i class="fa fa-home" aria-hidden="true"></i> Acceuil</a></li>
+                                            <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> liste des Arrendissements</a></li>
+                                        </ol>
+                                    
+                                        <div class="container">
+                                                <div class="row">
+                                        <div class="gg-pricing-table icon-table col-md-12 mt-50">
+                                         {{#each ar}}
+                                            {{>csss}}
+                                            <div class="col-md-5">
+                                                    <div class="single-pricing-table text-center clearfix">
+                                                        <!-- Heading -->
+                                                        <div class="pricing-table-heading">
+                                                            <div class="pricing-icon">
+                                                                <img src="/images/jmc_sponsor_92.png" alt="" class="center-block img-responsive">
+                                                            </div>
+                                                            <h2>Arrendissement</h2>
+                                                        </div>
+                                                       
+                                                        <div class="pricing-item">
+                                                            <ul>
+                                                                <li><p><strong>Libelle : </strong> {{Libelle}}</p></li>
+                                                               
+                                                             
+                                                            </ul>
+                                                        </div>
+                                                        <!-- Button -->
+                                                      
+                                                            <a href="#" class="delete6 btn btn-danger"><i class="fa fa-times"></i> Supprimer</a>
+                                                        
+                                                    </div>
+                                                </div>
+                                           
+                                         {{/each}}  
+                                        </div>
+                                                </div>
+                                         </div>
+                                     
+                                </div>
+                            </div>
+                
+                     </template>
+
+
+                     <template name="listeDelegations">
+                            <div class="container-fluid">
+                                        <div class="side-body">
+                                            <ol class="breadcrumb " id="bread">
+                                                <li><a href="{{link}}"><i class="fa fa-home" aria-hidden="true"></i> Acceuil</a></li>
+                                                <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> liste des Delegations</a></li>
+                                            </ol>
+                                         
+                                            <div class="container">
+                                                    <div class="row">
+                                            <div class="gg-pricing-table icon-table col-md-12 mt-50">
+                                             {{#each dl}}
+                                                {{>csss}}
+                                                <div class="col-md-5">
+                                                        <div class="single-pricing-table text-center clearfix">
+                                                            <!-- Heading -->
+                                                            <div class="pricing-table-heading">
+                                                                <div class="pricing-icon">
+                                                                    <img src="/images/jmc_sponsor_92.png" alt="" class="center-block img-responsive">
+                                                                </div>
+                                                                <h2>Delegation</h2>
+                                                            </div>
+                                                           
+                                                            <div class="pricing-item">
+                                                                <ul>
+                                                                    <li><p><strong>Libelle : </strong> {{Libelle}}</p></li>
+                                                                   
+                                                                 
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Button -->
+                                                           
+                                                                <a href="#" class="delete7 btn btn-danger"><i class="fa fa-times"></i> Supprimer</a>
+                                                           
+                                                        </div>
+                                                    </div>
+                                               
+                                             {{/each}}  
+                                            </div>
+                                                    </div>
+                                             </div>
+                                         
+                                    </div>
+                                </div>
+                    
+                         </template>
+
+
+
+
+                         <template name="listeGauvernerat">
+                                <div class="container-fluid">
+                                            <div class="side-body">
+                                                <ol class="breadcrumb " id="bread">
+                                                    <li><a href="{{link}}"><i class="fa fa-home" aria-hidden="true"></i> Acceuil</a></li>
+                                                    <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> liste des Gauvernerats</a></li>
+                                                </ol>
+                                              
+                                                <div class="container">
+                                                        <div class="row">
+                                                <div class="gg-pricing-table icon-table col-md-12 mt-50">
+                                                 {{#each gv}}
+                                                    {{>csss}}
+                                                    <div class="col-md-5">
+                                                            <div class="single-pricing-table text-center clearfix">
+                                                                <!-- Heading -->
+                                                                <div class="pricing-table-heading">
+                                                                    <div class="pricing-icon">
+                                                                        <img src="/images/jmc_sponsor_92.png" alt="" class="center-block img-responsive">
+                                                                    </div>
+                                                                    <h2>Gauvernerat</h2>
+                                                                </div>
+                                                               
+                                                                <div class="pricing-item">
+                                                                    <ul>
+                                                                        <li><p><strong>Libelle : </strong> {{Libelle}}</p></li>
+                                                                        <li><p><strong>Arrendissemen : </strong> {{Arrendissemen}}</p></li>
+                                                                        <li><p><strong>Delegation : </strong> {{Delegation}}</p></li>
+                                                                     
+                                                                    </ul>
+                                                                </div>
+                                                                <!-- Button -->
+                                                               
+                                                                    <a href="#" class="delete8 btn btn-danger"><i class="fa fa-times"></i> Supprimer</a>
+                                                            
+                                                            </div>
+                                                        </div>
+                                                   
+                                                 {{/each}}  
+                                                </div>
+                                                        </div>
+                                                 </div>
+                                             
+                                        </div>
+                                    </div>
+                        
+                             </template>
+
+
+                             <template name="listeLagement">
+                                    <div class="container-fluid">
+                                                <div class="side-body">
+                                                    <ol class="breadcrumb " id="bread">
+                                                        <li><a href="{{link}}"><i class="fa fa-home" aria-hidden="true"></i> Acceuil</a></li>
+                                                        <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> liste des Lagements</a></li>
+                                                    </ol>
+                                               
+                                                    <div class="container">
+                                                            <div class="row">
+                                                    <div class="gg-pricing-table icon-table col-md-12 mt-50">
+                                                     {{#each lg}}
+                                                        {{>csss}}
+                                                        <div class="col-md-5">
+                                                                <div class="single-pricing-table text-center clearfix">
+                                                                    <!-- Heading -->
+                                                                    <div class="pricing-table-heading">
+                                                                        <div class="pricing-icon">
+                                                                            <img src="/images/jmc_sponsor_92.png" alt="" class="center-block img-responsive">
+                                                                        </div>
+                                                                        <h2>Lagement</h2>
+                                                                    </div>
+                                                                   
+                                                                    <div class="pricing-item">
+                                                                        <ul>
+                                                                            <li><p><strong>Libelle : </strong> {{Libelle}}</p></li>
+                                                                            <li><p><strong>Locataire : </strong> {{Locataire}}</p></li>
+                                                                            <li><p><strong>Montant : </strong> {{Montant}}</p></li>
+                                                                            <li><p><strong>Date de debut : </strong> {{datedeb}}</p></li>
+                                                                            <li><p><strong>Date de fin : </strong> {{datefin}}</p></li>
+                                                                            <li><p><strong>Patrimoine : </strong> {{patrimoine}}</p></li>
+                                                                            <li><p><strong>Agent : </strong> {{Agent}}</p></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <!-- Button -->
+                                                                   
+                                                                        <a href="#" class="delete9 btn btn-danger"><i class="fa fa-times"></i> Supprimer</a>
+                                                                  
+                                                                </div>
+                                                            </div>
+                                                       
+                                                     {{/each}}  
+                                                    </div>
+                                                            </div>
+                                                     </div>
+                                                 
+                                            </div>
+                                        </div>
+                            
+                                 </template>
+
+                                 <template name="listeProfiles">
+                                        <div class="container-fluid">
+                                                    <div class="side-body">
+                                                        <ol class="breadcrumb " id="bread">
+                                                            <li><a href="{{link}}"><i class="fa fa-home" aria-hidden="true"></i> Acceuil</a></li>
+                                                            <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> liste des Profiles</a></li>
+                                                          
+                                                        </ol>
+                                                   
+
+                                                        
+                                                        <div class="container">
+                                                                <div class="row">
+                                                        <div class="gg-pricing-table icon-table col-md-12 mt-50">
+                                                                {{#each userss}}
+                                                            {{>csss}}
+                                                            <div class="col-md-5">
+                                                                    <div class="single-pricing-table text-center clearfix">
+                                                                        <!-- Heading -->
+                                                                        <div class="pricing-table-heading">
+                                                                            <div class="pricing-icon">
+                                                                                <img src="/images/jmc_sponsor_92.png" alt="" class="center-block img-responsive">
+                                                                            </div>
+                                                                            <h2>Profile</h2>
+                                                                        </div>
+                                                                       
+                                                                        <div class="pricing-item">
+                                                                            <ul>
+                                                                                <li><p><strong>Email : </strong> {{profile.email}}</p></li>
+                                                                                <li><p><strong>Username : </strong> {{username}}</p></li>
+                                                                                <li><p><strong>Nom : </strong> {{profile.Nom}}</p></li>
+                                                                                <li><p><strong>Prenom : </strong> {{profile.Prenom}}</p></li>
+                                                                                <li><p><strong>Sexe : </strong> {{profile.sexe}}</p></li>
+                                                                                <li><p><strong>Adresse : </strong> {{profile.Adresse}}</p></li>
+                                                                             
+                                                                            </ul>
+                                                                        </div>
+                                                                        {{#if ad profile.role}}
+                                                                        
+                                                                            <a href="#" class="delete1 btn btn-danger"><i class="fa fa-times"></i> Supprimer</a>
+                                                                      
+                                                                        {{/if}}
+                                                                    </div>
+                                                                </div>
+                                                           
+                                                         {{/each}}  
+                                                        </div>
+                                                                </div>
+                                                         </div>
+                                                      
+                                                                
+                                                               
+                                                                 
+                                                             
+                                                             
+                                                                       
+                                                                  
+
+                                                                
+
+
+                                                             
+                                                              
+                                                      
+
+                                                      
+                                                    </div>
+
+
+                                               
+                                        </div>    
+                                        
+                                                                
+                                                                
+                                                               
+                                     </template>
+
+                                     <template name="listeAgents">
+                                            <div class="container-fluid">
+                                                        <div class="side-body">
+                                                            <ol class="breadcrumb " id="bread">
+                                                                <li><a href="{{link}}"><i class="fa fa-home" aria-hidden="true"></i> Acceuil</a></li>
+                                                                <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> liste des Agents</a></li>
+                                                            </ol>
+                                                          
+
+                                                            <div class="container">
+                                                                    <div class="row">
+                                                            <div class="gg-pricing-table icon-table col-md-12 mt-50">
+                                                             {{#each agent}}
+                                                                {{>csss}}
+                                                                <div class="col-md-5">
+                                                                        <div class="single-pricing-table text-center clearfix">
+                                                                            <!-- Heading -->
+                                                                            <div class="pricing-table-heading">
+                                                                                <div class="pricing-icon">
+                                                                                    <img src="/images/jmc_sponsor_92.png" alt="" class="center-block img-responsive">
+                                                                                </div>
+                                                                                <h2>Agent</h2>
+                                                                            </div>
+                                                                           
+                                                                            <div class="pricing-item">
+                                                                                <ul>
+                                                                                    <li><p><strong>Nom : </strong> {{Nom}}</p></li>
+                                                                                    <li><p><strong>Prenom : </strong> {{Prenom}}</p></li>
+                                                                                    <li><p><strong>cin : </strong> {{cin}}</p></li>
+                                                                                    <li><p><strong>Date de naissance : </strong> {{daten}}</p></li>
+                                                                                    <li><p><strong>lieu de naissance : </strong> {{lieu}}</p></li>
+                                                                                    <li><p><strong>Sexe : </strong> {{sexe}}</p></li>
+                                                                                    <li><p><strong>Adresse : </strong> {{Adresse}}</p></li>
+                                                                                    <li><p><strong>Matricule : </strong> {{Matricule}}</p></li>
+                                                                                    <li><p><strong>Garde : </strong> {{Garde}}</p></li>
+                                                                                    <li><p><strong>Fonction : </strong> {{Fonction}}</p></li>
+                                                                                  
+                                                                                    
+                                                                                </ul>
+                                                                            </div>
+                                                                            <!-- Button -->
+                                                                          
+                                                                                <a href="#" class="delete11 btn btn-danger"><i class="fa fa-times"></i> Supprimer</a>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                               
+                                                             {{/each}}  
+                                                            </div>
+                                                                    </div>
+                                                             </div>
+                                                         
+                                                    </div>
+                                                </div>
+                                    
+                                         </template>
+
+
+                                         
